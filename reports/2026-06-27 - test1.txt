@@ -1,5 +1,0 @@
-10.0.0.1 | ONLINE | Ping(ms): 0.177
-10.0.0.2 | ONLINE | Ping(ms): 0.418
-10.0.0.3 | OFFLINE10.0.0.10 | OFFLINE10.0.10.5 | ONLINE | Ping(ms): 1.68
-10.0.10.6 | ONLINE | Ping(ms): 1.56
-10.0.10.7 | ONLINE | Ping(ms): 1.56
