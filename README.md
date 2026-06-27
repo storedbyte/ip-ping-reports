@@ -11,23 +11,23 @@ If you are ever in the need to ping a list of IP addresses and want the reachabl
 ## Usage
 
 Run the script:
-\```
+```
 python script.py
-\```
+```
 
 When prompted, enter the path to your IP address list. The file should contain only one IP address per line:
-\```
+```
 10.0.0.1
 10.0.0.2
 10.0.0.3
 ...
-\```
+```
 
 ---
 
 ## Example Output
 
-\```
+```
 10.0.0.1 | ONLINE | Ping(ms): 0.182
 
 10.0.0.2 | ONLINE | Ping(ms): 0.386
@@ -35,7 +35,7 @@ When prompted, enter the path to your IP address list. The file should contain o
 10.0.0.3 | OFFLINE
 
 10.0.0.4 | OFFLINE
-\```
+```
 
 ---
 
