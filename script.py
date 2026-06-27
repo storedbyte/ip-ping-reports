@@ -10,7 +10,15 @@ with open(os.path.expanduser(file_location), "r") as ip_list:
 
 # for each line in ip_addresses, take the result and pings each IP
 for ip in ip_addresses:
-    result = subprocess.run(["ping", "-c", "1", "-W", "1", ip], capture_output=True)
+    if os.name == "posix":
+        flags = ["-c", "1", "-W", "1"]
+    elif os.name == "nt":
+        flags = ["-n", "1", "-w", "1000"]
+    else:
+        print("Unsupported operating system")
+        exit()
+
+    result = subprocess.run(["ping"] + flags + [ip], capture_output=True)
     output = result.stdout.decode()
    
    # checks if output from ping command was a success or failure
@@ -20,3 +28,4 @@ for ip in ip_addresses:
         print(ip, "|", "ONLINE", "|", "Ping:", time)
     else:
         print(ip, "|", "OFFLINE", "|", "Ping: N/A")
+
